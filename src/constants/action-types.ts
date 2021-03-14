@@ -1,0 +1,6 @@
+export const GET_USERS = 'GET_USERS';
+export const GET_USERS_ASYNC = 'GET_USERS_ASYNC';
+export const GET_NEXT_USERS_ASYNC = 'GET_NEXT_USERS_ASYNC';
+export const SET_USERS_FETCHING = 'SET_USERS_FETCHING';
+export const SET_USERS_ERROR = 'SET_USERS_ERROR';
+export const SET_SEED = 'SET_SEED';
