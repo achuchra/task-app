@@ -1,6 +1,6 @@
 interface IUserActionPayload {
   params: { seed: string; page: number };
-  next?: boolean;
+  next: boolean;
 }
 
 interface IUserPayload {

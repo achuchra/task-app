@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import './grid-template.scss';
 
 interface IComponentProps {
   children: ReactElement[];

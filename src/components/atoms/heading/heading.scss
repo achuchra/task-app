@@ -1,0 +1,13 @@
+@use '../../../styles/index';
+@use '../../../styles/mixins';
+
+.heading {
+  color: index.$white-color;
+  font-size: 1.8rem;
+  text-shadow: index.$text-shadow;
+  font-weight: 400;
+
+  @include mixins.small {
+    font-size: 2.5rem;
+  }
+}

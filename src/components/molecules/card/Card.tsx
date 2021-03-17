@@ -1,7 +1,7 @@
 import React, { memo, ReactElement } from 'react';
-
 import Image from '../../atoms/image/Image';
 import Caption from '../../atoms/caption/Caption';
+import './card.scss';
 
 interface IComponentProps {
   src: string;
@@ -14,10 +14,14 @@ interface IComponentProps {
 
 const Card = ({ src, alt, title, first, last, location }: IComponentProps): ReactElement => {
   return (
-    <div>
-      <Image src={src} alt={alt} />
-      <Caption text={`${title} ${first} ${last}`} />
-      <Caption text={location} />
+    <div className="card">
+      <div className="card__image">
+        <Image src={src} alt={alt} />
+      </div>
+      <div className="card__bottom">
+        <Caption variant="big" text={`${title} ${first} ${last}`} />
+        <Caption variant="small" text={location} />
+      </div>
     </div>
   );
 };

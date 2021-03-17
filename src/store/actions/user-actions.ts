@@ -1,9 +1,6 @@
 import { Action } from 'redux';
+import { ActionWithPayload } from '../action-with-payload.interface';
 import { GET_USERS, SET_USERS_ERROR, SET_USERS_FETCHING } from '../../constants/action-types';
-
-interface ActionWithPayload<T> extends Action {
-  payload: T;
-}
 
 export const setUsersLoading = (): Action => ({
   type: SET_USERS_FETCHING,

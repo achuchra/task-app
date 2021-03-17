@@ -1,0 +1,17 @@
+@import '../styles/mixins.scss';
+
+.grid-template {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  @include x-small {
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include medium {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include large {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

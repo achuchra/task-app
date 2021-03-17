@@ -1,9 +1,10 @@
 import React, { memo, ReactChild, ReactElement } from 'react';
+import './header.scss';
 
 interface IComponentProps {
   children: ReactChild;
 }
 
-const Header = ({ children }: IComponentProps): ReactElement => <header>{children}</header>;
+const Header = ({ children }: IComponentProps): ReactElement => <header className="header">{children}</header>;
 
 export default memo(Header);

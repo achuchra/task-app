@@ -1,0 +1,14 @@
+@use '../../../styles/index';
+
+.caption-big {
+  color: index.$dark-blue-color;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.caption-small {
+  color: index.$dark-blue-color;
+  font-size: 1.5rem;
+  padding-top: 10px;
+  font-weight: 300;
+}

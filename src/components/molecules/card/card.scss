@@ -1,0 +1,49 @@
+@use '../../../styles/index';
+@use '../../../styles/mixins';
+
+.card {
+  // @extend .glass;
+  background: index.$background;
+  box-shadow: index.$box-shadow;
+  border: index.$border;
+  border-radius: index.$border-radius;
+  backdrop-filter: index.$backdrop-filter;
+  -webkit-backdrop-filter: index.$backdrop-filter;
+
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+
+  &__image {
+    padding: 10px;
+
+    span {
+      border-radius: 10px;
+    }
+
+    img {
+      border-radius: 10px;
+      box-shadow: index.$box-shadow;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+  }
+
+  @include mixins.x-small {
+    &__image {
+      padding: 20px;
+    }
+  }
+}

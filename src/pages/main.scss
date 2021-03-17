@@ -1,0 +1,44 @@
+@use '../styles/index';
+@use '../styles/mixins';
+
+.content {
+  max-width: index.$content-max-width;
+  margin: 20px 10px 0px 10px;
+
+  .search {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+
+    input {
+      font-size: 2rem;
+      min-width: 300px;
+    }
+
+    p {
+      margin: 15px 0px 0px 0px;
+      color: index.$white-color;
+      font-weight: 400;
+      text-shadow: index.$text-shadow;
+    }
+  }
+
+  @include mixins.small {
+    margin: 20px 20px 0px 20px;
+
+    .search {
+      flex-direction: row;
+
+      p {
+        margin: 0px 0px 0px 15px;
+      }
+    }
+  }
+
+  @include mixins.large {
+    margin: 20px auto 0px auto;
+  }
+}
