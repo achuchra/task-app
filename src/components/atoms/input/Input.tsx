@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, ReactElement } from 'react';
+import React, { ChangeEventHandler, memo, ReactElement } from 'react';
 import './input.scss';
 
 interface IComponentProps {
@@ -9,7 +9,7 @@ interface IComponentProps {
 }
 
 const Input = ({ name, type, placeholder, onChange }: IComponentProps): ReactElement => {
-  return <input className="input" name={name} type={type} placeholder={placeholder} onChange={onChange} />;
+  return <input className="input glass" name={name} type={type} placeholder={placeholder} onChange={onChange} />;
 };
 
-export default Input;
+export default memo(Input);

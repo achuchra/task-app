@@ -2,6 +2,7 @@ $white-color: rgb(255, 255, 255);
 $light-grey-color: rgba(0, 0, 0, 0.3);
 $black-color: rgb(0, 0, 0);
 $dark-blue-color: rgb(22, 43, 60);
+$warning-color: rgb(133, 53, 71);
 $text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
 
 $content-max-width: 1200px;
@@ -11,39 +12,3 @@ $box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
 $backdrop-filter: blur(5px);
 $border-radius: 10px;
 $border: 1px solid rgba(255, 255, 255, 0.2);
-
-.glass {
-  background: $background;
-  box-shadow: $box-shadow;
-  border: $border;
-  border-radius: $border-radius;
-  backdrop-filter: $backdrop-filter;
-  -webkit-backdrop-filter: $backdrop-filter;
-}
-
-@keyframes loading-anim {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.loader {
-  display: block;
-  width: 80px;
-  height: 80px;
-  margin: 50px auto 50px auto;
-  opacity: 0.5;
-}
-.loader:after {
-  content: ' ';
-  display: block;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 8px solid $white-color;
-  border-color: $white-color transparent $white-color transparent;
-  animation: loading-anim 1s linear infinite;
-}

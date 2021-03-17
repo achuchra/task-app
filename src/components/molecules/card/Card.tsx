@@ -5,22 +5,24 @@ import './card.scss';
 
 interface IComponentProps {
   src: string;
-  alt: string;
   title: string;
-  first: string;
-  last: string;
-  location: string;
+  alt?: string;
+  first?: string;
+  last?: string;
+  location?: string;
 }
 
-const Card = ({ src, alt, title, first, last, location }: IComponentProps): ReactElement => {
+const Card = ({ src, title, alt = '', first = '', last = '', location = '' }: IComponentProps): ReactElement => {
   return (
-    <div className="card">
+    <div className="card glass">
       <div className="card__image">
         <Image src={src} alt={alt} />
       </div>
       <div className="card__bottom">
         <Caption variant="big" text={`${title} ${first} ${last}`} />
-        <Caption variant="small" text={location} />
+        <div className="card__bottom--location">
+          <Caption variant="small" text={location} />
+        </div>
       </div>
     </div>
   );

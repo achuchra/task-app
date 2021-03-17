@@ -5,7 +5,9 @@ const useDebounce = (value: string, delay: number): string => {
 
   useEffect(() => {
     const handler = setTimeout(() => {
-      setSearchedValue(value);
+      if (value) {
+        setSearchedValue(value);
+      }
     }, delay);
 
     return () => clearTimeout(handler);

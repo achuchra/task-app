@@ -3,11 +3,11 @@ import './caption.scss';
 
 interface IComponentProps {
   text: string;
-  variant: 'big' | 'small';
+  variant?: 'big' | 'small';
 }
 
 const Caption = ({ text, variant = 'small' }: IComponentProps): ReactElement => (
-  <p className={variant === 'big' ? 'caption-big' : 'caption-small'}>{text}</p>
+  <p className={`caption ${variant === 'big' ? 'caption__big' : 'caption__small'}`}>{text}</p>
 );
 
 export default memo(Caption);

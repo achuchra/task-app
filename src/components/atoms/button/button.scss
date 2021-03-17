@@ -1,0 +1,35 @@
+@use '../../../styles/index';
+@use '../../../styles/mixins';
+
+.button {
+  padding: 15px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+
+  &__fixed {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    @include mixins.medium {
+      right: 50px;
+      bottom: 50px;
+    }
+
+    @include mixins.large {
+      right: 5%;
+      bottom: 70px;
+    }
+  }
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 2px 2px index.$dark-blue-color;
+    outline-style: none;
+  }
+}

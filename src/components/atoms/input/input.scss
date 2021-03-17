@@ -1,14 +1,6 @@
 @use '../../../styles/index';
 
 .input {
-  // @extend .glass;
-  background: index.$background;
-  box-shadow: index.$box-shadow;
-  border: index.$border;
-  border-radius: index.$border-radius;
-  backdrop-filter: index.$backdrop-filter;
-  -webkit-backdrop-filter: index.$backdrop-filter;
-
   padding: 10px;
   color: index.$dark-blue-color;
 
@@ -17,7 +9,7 @@
   }
 
   &:focus {
-    box-shadow: 0 0 1pt 2pt index.$dark-blue-color;
+    box-shadow: 0 0 2px 2px index.$dark-blue-color;
     outline-style: none;
   }
 }

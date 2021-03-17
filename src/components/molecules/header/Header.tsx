@@ -5,6 +5,6 @@ interface IComponentProps {
   children: ReactChild;
 }
 
-const Header = ({ children }: IComponentProps): ReactElement => <header className="header">{children}</header>;
+const Header = ({ children }: IComponentProps): ReactElement => <header className="header glass">{children}</header>;
 
 export default memo(Header);

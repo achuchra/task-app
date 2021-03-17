@@ -2,14 +2,6 @@
 @use '../../../styles/mixins';
 
 .header {
-  // @extend .glass;
-  background: index.$background;
-  box-shadow: index.$box-shadow;
-  border: index.$border;
-  border-radius: index.$border-radius;
-  backdrop-filter: index.$backdrop-filter;
-  -webkit-backdrop-filter: index.$backdrop-filter;
-
   max-width: index.$content-max-width;
   margin: 5px;
   padding: 30px 10px;

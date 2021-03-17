@@ -1,3 +1,5 @@
+@use './styles/index';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
@@ -8,4 +10,40 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.glass {
+  background: index.$background;
+  box-shadow: index.$box-shadow;
+  border: index.$border;
+  border-radius: index.$border-radius;
+  backdrop-filter: index.$backdrop-filter;
+  -webkit-backdrop-filter: index.$backdrop-filter;
+}
+
+@keyframes loading-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 50px auto 50px auto;
+  opacity: 0.5;
+}
+.loader:after {
+  content: ' ';
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 8px solid index.$white-color;
+  border-color: index.$white-color transparent index.$white-color transparent;
+  animation: loading-anim 1s linear infinite;
 }
