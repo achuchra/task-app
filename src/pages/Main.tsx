@@ -15,9 +15,9 @@ import Input from '../components/atoms/input/Input';
 import Button from '../components/atoms/button/Button';
 import Card from '../components/molecules/card/Card';
 import GridTemplate from '../templates/GridTemplate';
-
 import { ReactComponent as ArrowUpIcon } from '../assets/svg/arrow-up.svg';
 import { ReactComponent as SearchIcon } from '../assets/svg/search.svg';
+
 import { ActionWithPayload } from '../store/action-with-payload.interface';
 import placeholder from '../assets/icon-placeholder.png';
 import { APP_HEADING, SEARCH_BY_SEED, CURRENT_SEED, ERROR_OCCURED, LOADING_DATA } from '../constants';
@@ -28,7 +28,7 @@ const Main = (): ReactElement => {
   const currState = useSelector((state: TAppState) => state);
   const {
     users: {
-      users: { results, fetched, error, page },
+      users: { results, fetching, fetched, error, page },
     },
     seed: { currentSeed },
   } = currState;
@@ -97,7 +97,7 @@ const Main = (): ReactElement => {
           <Caption variant="big" text={`${CURRENT_SEED} ${currentSeed}`} />
         </div>
         {error && <Warning text={ERROR_OCCURED} />}
-        {!error && !fetched && <GridTemplate>{Array.from(Array(15)).map(placeholderCard)}</GridTemplate>}
+        {!error && fetching && <GridTemplate>{Array.from(Array(15)).map(placeholderCard)}</GridTemplate>}
         {fetched && results.length && (
           <>
             <GridTemplate>{results.map(userCard)}</GridTemplate>
