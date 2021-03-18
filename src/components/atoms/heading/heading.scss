@@ -3,11 +3,11 @@
 
 .heading {
   color: index.$white-color;
-  font-size: 1.8rem;
+  font-size: index.$font-lg;
   text-shadow: index.$text-shadow;
   font-weight: 400;
 
   @include mixins.small {
-    font-size: 2.5rem;
+    font-size: index.$font-xlg;
   }
 }

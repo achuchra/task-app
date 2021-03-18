@@ -1,7 +1,7 @@
 @use '../../../styles/index';
 
 .warning {
-  font-size: 1.8rem;
+  font-size: index.$font-md;
   color: index.$warning-color;
   border: 1px solid index.$warning-color;
   text-align: center;

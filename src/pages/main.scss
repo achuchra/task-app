@@ -11,11 +11,23 @@
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: index.$font-lg;
 
-    input {
-      font-size: 2rem;
-      min-width: 300px;
+    &__input-wrapper {
+      position: relative;
+
+      input {
+        min-width: 300px;
+        padding-left: 40px;
+      }
+
+      svg {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%) scale(0.8);
+        fill: index.$light-grey-color;
+      }
     }
 
     p {

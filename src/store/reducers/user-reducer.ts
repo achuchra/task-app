@@ -51,6 +51,7 @@ const userReducer = (state: IUserState = userInitialState, action: TAction): IUs
         users: {
           ...state.users,
           error: true,
+          fetching: false,
         },
       };
     default:

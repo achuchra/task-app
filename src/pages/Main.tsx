@@ -17,6 +17,7 @@ import Card from '../components/molecules/card/Card';
 import GridTemplate from '../templates/GridTemplate';
 
 import { ReactComponent as ArrowUpIcon } from '../assets/svg/arrow-up.svg';
+import { ReactComponent as SearchIcon } from '../assets/svg/search.svg';
 import { ActionWithPayload } from '../store/action-with-payload.interface';
 import placeholder from '../assets/icon-placeholder.png';
 import { APP_HEADING, SEARCH_BY_SEED, CURRENT_SEED, ERROR_OCCURED, LOADING_DATA } from '../constants';
@@ -79,7 +80,7 @@ const Main = (): ReactElement => {
   };
 
   const placeholderCard = (item: undefined, index: number) => {
-    return <Card key={index} src={placeholder} title={LOADING_DATA} />;
+    return <Card key={index} src={placeholder} title={LOADING_DATA} location="-" />;
   };
 
   return (
@@ -89,7 +90,10 @@ const Main = (): ReactElement => {
       </Header>
       <main className="content">
         <div className="search">
-          <Input name="search" type="text" placeholder={SEARCH_BY_SEED} onChange={handleSearchInputChange} />
+          <div className="search__input-wrapper">
+            <Input name="search" type="text" placeholder={SEARCH_BY_SEED} onChange={handleSearchInputChange} />
+            <SearchIcon />
+          </div>
           <Caption variant="big" text={`${CURRENT_SEED} ${currentSeed}`} />
         </div>
         {error && <Warning text={ERROR_OCCURED} />}

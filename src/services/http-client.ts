@@ -4,7 +4,7 @@ export const BASE_URL = 'https://randomuser.me/api?inc=name,location,picture&res
 
 const instance = axios.create({
   baseURL: BASE_URL,
-  timeout: 10000,
+  timeout: 5000,
 });
 
 const http = {

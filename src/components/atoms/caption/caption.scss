@@ -4,13 +4,12 @@
   color: index.$dark-blue-color;
 
   &__big {
-    font-size: 2rem;
+    font-size: index.$font-lg;
     font-weight: 400;
   }
 
   &__small {
-    font-size: 1.5rem;
-    padding-top: 10px;
+    font-size: index.$font-sm;
     font-weight: 300;
   }
 }

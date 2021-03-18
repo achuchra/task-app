@@ -10,15 +10,10 @@ html {
 }
 
 noscript {
+  display: block;
   width: 100%;
   text-align: center;
-  display: block;
   margin: 30px 0;
-}
-
-body {
-  background-image: linear-gradient(to top, #c49ba4, #c1a1b7, #b7a9c8, #a8b2d3, #99bcd8);
-  background-attachment: fixed;
 }
 
 input[type='text'] {
